@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Ola Mundo!</Text>
-      <Simples />
+      <Simples texto="Passando um texto para componente (Props)" />
     </View>
   );
 }
