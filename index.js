@@ -1,5 +1,6 @@
-import registerRootComponent from 'expo/build/launch/registerRootComponent';
+import {AppRegistry} from 'react-native';
+// import App from './src/App';
+import Menu from './src/Menu';
+import {name as appName} from './app.json';
 
-import App from './src/App';
-
-registerRootComponent(App);
+AppRegistry.registerComponent(appName, () => Menu);

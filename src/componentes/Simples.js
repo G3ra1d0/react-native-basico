@@ -1,8 +1,13 @@
-import React from "react";
-import { Text } from "react-native";
+import React from 'react';
+import {View, Text} from 'react-native';
 
-import Padrao from "../estilo/Padrao";
+import Padrao from '../estilo/Padrao';
 
-export default (props) => {
-  return <Text style={Padrao.ex}>{props.texto}</Text>;
+export default ({route}) => {
+  const {texto} = route.params;
+  return (
+    <View style={Padrao.container}>
+      <Text style={Padrao.ex}>{texto}</Text>
+    </View>
+  );
 };
