@@ -5,13 +5,19 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import Simples from './componentes/Simples';
 import ParImpar from './componentes/ParImpar';
+import Cont from './componentes/Contador';
 
 const Drawer = createDrawerNavigator();
 
 export default () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Simples">
+      <Drawer.Navigator>
+        <Drawer.Screen
+          name="Contador"
+          component={Cont}
+          initialParams={{numero: 0}}
+        />
         <Drawer.Screen
           name="Simples"
           component={Simples}
